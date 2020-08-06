@@ -14,3 +14,4 @@ export default class Student implements IUser {
     public getAge(): number {
       return moment().diff(this.birthDate, "years");
     }
+}
