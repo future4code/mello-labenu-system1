@@ -41,7 +41,7 @@ console.log(turma2)
 
 
 function createStudent(
-    id: number,
+    id: string,
     name: string,
     email: string,
     birthDate: moment.Moment,
@@ -52,11 +52,11 @@ function createStudent(
 }
 
 function createTeacher(
-    id: number,
+    id: string,
     name: string,
     email: string,
     birthDate: moment.Moment,
-    expertise: Expertise
+    expertise: TS[]
 ): Teacher{
     const user = new Teacher(id, name, email, birthDate, expertise)
     return user
