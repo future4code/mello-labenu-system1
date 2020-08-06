@@ -1,12 +1,22 @@
-import { User } from "./User";
-import { Expertise } from "./Expertise";
+import * as moment from 'moment'
+import IUser from "./User"
 
-export class Teacher implements User{
+export enum TEACHER_SPECIALTY {
+    REACT = "REACT",
+    REDUX = "REDUX",
+    CSS = "CSS",
+    TESTES = "TESTES",
+    TYPESCRIPT = "TYPESCRIPT",
+    OOP = "OOP",
+    BACKEND = "BACKEND",
+  }
+  
+  export class Teacher implements IUser {
     constructor(
-        public id: number,
-        public name: string,
-        public email: string,
-        public birthDate: moment.Moment,
-        private expertise: Expertise
-    ){}
-}
+      public id: string,
+      public name: string,
+      public email: string,
+      public birthDate: moment.Moment, 
+      public specialties: TEACHER_SPECIALTY[]
+    ) {}
+  }

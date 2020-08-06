@@ -1,6 +1,5 @@
-export interface User {
-    id: number,
-    name: string,
-    email: string,
-    birthDate: moment.Moment
-}
+export default interface User {
+    id: string;
+    name: string;
+    email: string;
+  }

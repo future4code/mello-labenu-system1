@@ -1,12 +1,16 @@
-import { User } from "./User";
+import * as moment from 'moment'
+import IUser from "./User"
 
-export class Student implements User{
+
+export default class Student implements IUser {
     constructor(
-        public id: number,
-        public name: string,
-        public email: string,
-        public birthDate: moment.Moment,
-        private hobbies: string[] = []
-    ){}
-    
-}
+      public id: string,
+      public name: string,
+      public email: string,
+      public birthDate: moment.Moment,
+      public hobbies: string[]
+    ) {}
+  
+    public getAge(): number {
+      return moment().diff(this.birthDate, "years");
+    }
