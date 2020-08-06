@@ -20,7 +20,7 @@ export abstract class Team {
         protected endDate: moment.Moment,
         protected teacherList: Teacher[],
         protected studentList: Student[],
-        protected module: MODULE = undefined
+        protected module: MODULE | undefined = undefined
     ){}
 
     public addStudend(student: Student): void {
