@@ -1,4 +1,4 @@
-import * as moment from 'moment'
+import moment from 'moment'
 import IUser from "./User"
 
 export enum TEACHER_SPECIALTY {
