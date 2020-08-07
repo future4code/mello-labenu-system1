@@ -41,15 +41,15 @@ const turma2 = new NightTime("3224",
 // console.log(turma1.getStudentAge("31142"))
 console.log(turma2)
 */
-//createStudent("31141","Henrique","henrique@gmail.com", dataNasc, ["estudar", "nadar"])
-//createTeacher("414110", "Turing", "turing@gmail.com", dataNasc2, [TS.CSS, TS.REDUX ])
+createStudent("31141","Henrique","henrique@gmail.com", dataNasc, ["estudar", "nadar"])
+createTeacher("414110", "Turing", "turing@gmail.com", dataNasc2, [TS.CSS, TS.REDUX ])
 const arrayStudents: Student[] = file.readDataBaseStudents()
 const arrayTeachers: Teacher[] = file.readDataBaseTeacher()
-//createTeam("FullTime", "31414", "Labenu",
-//    moment("02/05/1996", "DD/MM/YYYY"),
-//    moment("02/05/1997", "DD/MM/YYYY"),
-//    arrayTeachers, arrayStudents, MODULE.NUM1
-//    )
+createTeam("FullTime", "31414", "Labenu",
+    moment("02/05/1996", "DD/MM/YYYY"),
+    moment("02/05/1997", "DD/MM/YYYY"),
+    arrayTeachers, arrayStudents, MODULE.NUM1
+    )
 createTeam("nighttime", "31414", "Labenu",
     moment("02/05/1996", "DD/MM/YYYY"),
     moment("02/05/1997", "DD/MM/YYYY"),
@@ -63,7 +63,6 @@ function createStudent(
     hobby: string[]
 ): void {
     const array: Student[] = file.readDataBaseStudents()
-    console.log(array)
     const user = new Student(id, name, email, birthDate, hobby)
     array.push(user)
     file.writeDataBaseStudents(array)
