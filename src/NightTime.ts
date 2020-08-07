@@ -1,7 +1,6 @@
 import {Teacher} from "./Teacher"
 import Student from "./Student"
 import {Team, MODULE} from "./Team"
-import { throws } from "assert"
 
 export default class NightTime extends Team{
     constructor(
