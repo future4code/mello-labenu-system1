@@ -22,7 +22,7 @@
   "homepage": "https://github.com/future4code/mello-labenu-system1#readme",
   "dependencies": {
     "@types/node": "^14.0.27",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "typescript": "^3.9.7"
   }
 }
